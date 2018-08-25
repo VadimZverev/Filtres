@@ -9,7 +9,8 @@ namespace Filtres.Controllers
 {
     public class HomeController : Controller
     {
-        [CustomAuth(false)]
+        //[CustomAuth(false)]
+        [Authorize(Users = "adam, steve, jacqui", Roles = "admin")]
         public string Index()
         {
             return "Это Index действие Home контроллера";
