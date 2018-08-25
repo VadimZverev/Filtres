@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Principal;
 using System.Web.Mvc;
 using System.Web.Mvc.Filters;
 using System.Web.Routing;
@@ -9,12 +10,16 @@ namespace Filtres.Infrastructure
     {
         public void OnAuthentication(AuthenticationContext filterContext)
         {
-            throw new NotImplementedException();
+            IIdentity ident = filterContext.Principal.Identity;
+            if (!ident.IsAuthenticated || !ident.Name.EndsWith("@google.com"))
+            {
+                filterContext.Result = new HttpUnauthorizedResult();
+            }
         }
 
         public void OnAuthenticationChallenge(AuthenticationChallengeContext filterContext)
         {
-            if (filterContext.Result == null)
+            if (filterContext.Result == null || filterContext.Result is HttpUnauthorizedResult)
             {
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary
                 {

@@ -15,5 +15,11 @@ namespace Filtres.Controllers
         {
             return "Это Index действие Home контроллера";
         }
+
+        [GoogleAuth]
+        public string List()
+        {
+            return "Это List действие Home контроллера";
+        }
     }
 }
