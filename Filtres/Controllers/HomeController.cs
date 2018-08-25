@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Filtres.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace Filtres.Controllers
 {
     public class HomeController : Controller
     {
+        [CustomAuth(false)]
         public string Index()
         {
             return "Это Index действие Home контроллера";
