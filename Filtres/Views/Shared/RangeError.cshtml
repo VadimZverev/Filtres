@@ -1,9 +1,8 @@
-﻿@model int
+﻿@model HandleErrorInfo
 
 @{
     Layout = null;
-    var count = 0;
-    var number = Model / count;
+    ViewBag.Title = "Извините, возникла проблема!";
 }
 <!DOCTYPE html>
 <html>
@@ -13,9 +12,15 @@
 </head>
 <body>
     <h2>Простите</h2>
-    <span>Значение @Model было вне ожидаемого диапазона.</span>
+    <span>
+        Значение @((ArgumentOutOfRangeException)Model.Exception).ActualValue
+        было вне ожидаемого диапазона.
+    </span>
     <div>
         @Html.ActionLink("Измените значение и попробуйте опять", "Index")
+    </div>
+    <div style="display:none">
+        @Model.Exception.StackTrace
     </div>
 </body>
 </html>

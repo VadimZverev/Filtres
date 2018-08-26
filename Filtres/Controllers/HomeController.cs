@@ -23,7 +23,7 @@ namespace Filtres.Controllers
             return "Это List действие Home контроллера";
         }
 
-        [RangeException]
+        [HandleError(ExceptionType = typeof(ArgumentOutOfRangeException), View = "RangeError")]
         public string RangeTest(int id)
         {
             if (id > 100)

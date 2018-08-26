@@ -9,7 +9,7 @@ namespace Filtres.Infrastructure
         {
             if (!filterContext.ExceptionHandled && filterContext.Exception is ArgumentOutOfRangeException)
             {
-                int val = (int)(((ArgumentOutOfRangeException)filterContext.Exception).ActualValue);
+                int val = (int)((ArgumentOutOfRangeException)filterContext.Exception).ActualValue;
 
                 filterContext.Result = new ViewResult
                 {
