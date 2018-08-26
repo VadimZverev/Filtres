@@ -17,6 +17,7 @@ namespace Filtres.Controllers
         }
 
         [GoogleAuth]
+        [Authorize(Users = "bob@google.com")]
         public string List()
         {
             return "Это List действие Home контроллера";
