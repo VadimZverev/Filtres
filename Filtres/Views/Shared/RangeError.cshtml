@@ -1,0 +1,19 @@
+﻿@model int
+
+@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ошибка диапазона</title>
+</head>
+<body>
+    <h2>Простите</h2>
+    <span>Значение @Model было вне ожидаемого диапазона.</span>
+    <div>
+        @Html.ActionLink("Измените значение и попробуйте опять", "Index")
+    </div>
+</body>
+</html>
