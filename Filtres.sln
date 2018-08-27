@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filtres", "Filtres\Filtres.csproj", "{EA865CAD-B1F0-4CBD-AA10-930FCB9EBEBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filtres.Tests", "Filtres.Tests\Filtres.Tests.csproj", "{B005EC55-D56D-41E4-96B4-B011C3CB0E1F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{EA865CAD-B1F0-4CBD-AA10-930FCB9EBEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA865CAD-B1F0-4CBD-AA10-930FCB9EBEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA865CAD-B1F0-4CBD-AA10-930FCB9EBEBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B005EC55-D56D-41E4-96B4-B011C3CB0E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B005EC55-D56D-41E4-96B4-B011C3CB0E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B005EC55-D56D-41E4-96B4-B011C3CB0E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B005EC55-D56D-41E4-96B4-B011C3CB0E1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
