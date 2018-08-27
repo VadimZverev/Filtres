@@ -11,7 +11,7 @@ namespace Filtres.Infrastructure
         {
             timer.Stop();
             filterContext.HttpContext.Response.Write(
-                    string.Format($"<div>Время действия: {timer.Elapsed.TotalSeconds}</div>"));
+                    string.Format($"<div>Время результата: {timer.Elapsed.TotalSeconds}</div>"));
         }
 
         public void OnResultExecuting(ResultExecutingContext filterContext)

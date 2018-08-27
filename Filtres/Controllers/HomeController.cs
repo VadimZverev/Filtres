@@ -39,6 +39,7 @@ namespace Filtres.Controllers
 
         [ProfileAction]
         [ProfileResult]
+        [ProfileAll]
         public string FilterTest()
         {
             return "Это FilterTest действие";
