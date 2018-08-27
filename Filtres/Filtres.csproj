@@ -100,6 +100,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\SelectiveCache\Index.cshtml" />
+    <Content Include="Views\SelectiveCache\ChildAction.cshtml" />
     <None Include="Views\Shared\RangeError.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -110,6 +112,7 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\GoogleAccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SelectiveCacheController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
