@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace Filtres.Infrastructure
 {
-    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, AllowMultiple = true)]
     public class SimpleMessageAttribute : FilterAttribute, IActionFilter
     {
-        public string Message;
+        public string Message { get; set; }
 
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
