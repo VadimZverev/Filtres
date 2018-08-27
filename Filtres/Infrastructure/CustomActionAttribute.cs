@@ -7,15 +7,15 @@ namespace Filtres.Infrastructure
     {
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            if (filterContext.HttpContext.Request.IsLocal)
-            {
-                filterContext.Result = new HttpNotFoundResult();
-            }
+            // Пока ещё не реализован
         }
 
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            // Пока ещё не реализован
+            if (filterContext.HttpContext.Request.IsLocal)
+            {
+                filterContext.Result = new HttpNotFoundResult();
+            }
         }
     }
 }
